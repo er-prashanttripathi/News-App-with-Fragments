@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_dark">
+        <!-- android:paddingTop="?attr/actionBarSize">-->
+
+        <LinearLayout
+            android:id="@+id/NewsLayoutLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="@id/container"
+            app:layout_constraintRight_toRightOf="@id/container"
+            app:layout_constraintTop_toTopOf="@id/container">
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/bg_dark"
+                app:icon="@drawable/vertical_layout"
+                app:iconTint="#865DFF"
+                app:iconGravity="top"
+                android:paddingTop="10dp"
+                app:strokeColor="@color/txt_light_pink"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/bg_dark"
+                app:icon="@drawable/grid_layout"
+                app:iconTint="#865DFF"
+                app:iconGravity="top"
+                android:paddingTop="10dp"
+                app:strokeColor="@color/txt_light_pink"
+                app:strokeWidth="1dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="5dp"
+                android:backgroundTint="@color/bg_dark"
+                app:icon="@drawable/corousal_layout"
+                app:iconTint="#865DFF"
+                app:iconGravity="top"
+                android:paddingTop="10dp"
+                app:strokeColor="@color/txt_light_pink"
+                app:strokeWidth="1dp" />
+            <!--  <com.google.android.material.card.MaterialCardView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginHorizontal="5dp"
+                          android:backgroundTint="@color/txt_pink">
+
+                          <ImageView
+                              android:layout_width="40dp"
+                              android:layout_height="40dp"
+                              android:layout_margin="1dp"
+                              android:background="@color/bg_dark"
+                              android:padding="5dp"
+                              android:src="@drawable/vertical_layout" />
+                      </com.google.android.material.card.MaterialCardView>-->
+            <!--  <com.google.android.material.card.MaterialCardView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginHorizontal="5dp"
+                  android:backgroundTint="@color/txt_pink">
+
+                  <ImageButton
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:layout_margin="1dp"
+                      android:background="@color/bg_dark"
+                      android:padding="5dp"
+                      android:src="@drawable/grid_layout" />
+              </com.google.android.material.card.MaterialCardView>-->
+
+            <!-- <com.google.android.material.card.MaterialCardView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginHorizontal="5dp"
+                 android:backgroundTint="@color/txt_pink">
+
+                 <ImageButton
+                     android:layout_width="40dp"
+                     android:layout_height="40dp"
+                     android:layout_margin="1dp"
+                     android:background="@color/bg_dark"
+                     android:padding="5dp"
+                     android:src="@drawable/corousal_layout" />
+             </com.google.android.material.card.MaterialCardView>-->
+
+
+        </LinearLayout>
+
+        <View
+
+            android:id="@+id/horizontalLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="10dp"
+            android:background="@color/bg_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/NewsLayoutLinear" />
+
+        <fragment
+            android:id="@+id/nav_host_fragment_activity_main"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="459dp"
+            android:layout_height="582dp"
+            android:layout_marginTop="20dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/nav_view"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalLine"
+            app:navGraph="@navigation/mobile_navigation" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+
+            android:id="@+id/nav_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:background="@color/bg_dark"
+            app:itemIconTint="@drawable/bottom_navigation_selector"
+            app:itemRippleColor="@color/txt_pink"
+            app:itemTextColor="@drawable/bottom_navigation_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
